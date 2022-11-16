@@ -13,5 +13,8 @@
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1"
+  },
+  "dependencies": {
+    "clean-css": "^5.3.1"
   }
 }

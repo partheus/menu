@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/fonts.css" />
+    {% set css %}
+    {% include "css/fonts.css" %}
+    {% include "css/main.css" %}
+    {% endset %}
+    <!-- feed it through our cssmin filter to minify -->
+    <style>
+      {{css | cssmin | safe}}
+    </style>
     <link rel="icon" href="/img/menupie.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
