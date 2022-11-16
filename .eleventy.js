@@ -1,11 +1,14 @@
 module.exports = function (eleventyConfig) {
-  
-    eleventyConfig.addPassthroughCopy("./style.css");
-    eleventyConfig.addPassthroughCopy("./img");
-  
-    eleventyConfig.addPassthroughCopy("CNAME");
-  
-    return {
-      passthroughFileCopy: true,
-    };
-  }
+  eleventyConfig.addCollection("projects", function (collection) {
+    return collection.getFilteredByGlob("projects/*.md");
+  });
+
+  eleventyConfig.addPassthroughCopy("./css");
+  eleventyConfig.addPassthroughCopy("./img");
+
+  eleventyConfig.addPassthroughCopy("CNAME");
+
+  return {
+    passthroughFileCopy: true,
+  };
+}

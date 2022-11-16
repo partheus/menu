@@ -1,25 +1,17 @@
 {
-  "name": "menu",
+  "name": "@partheus/food",
   "version": "1.0.0",
-  "description": "",
+  "description": "A place for Parth's favorite eats",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "eleventy --serve",
     "build": "eleventy"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/partheus/menu.git"
-  },
   "keywords": [],
   "author": "",
-  "license": "GPL 3",
-  "bugs": {
-    "url": "https://github.com/partheus/menu/issues"
-  },
-  "homepage": "https://github.com/partheus/menu#readme",
+  "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.2"
+    "@11ty/eleventy": "^0.12.1"
   }
 }

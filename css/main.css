@@ -1,0 +1,314 @@
+:root {
+  --color-dark: rgb(14, 24, 12);
+  --color-mid: #e6b771;
+  --color-light: rgb(251, 245, 233);
+  --color-red: rgb(220, 20, 60);
+  --color-pista: aquamarine;
+  --max-width: 150ch;
+  --font-primary: 'League Spartan', sans-serif;
+}
+
+.light--mode {
+  --color-dark: rgb(232, 250, 233);
+  --color-mid: #810000;
+  --color-light: rgb(12, 12, 11);
+  --color-red: rgb(0, 195, 254);
+  --color-pista: rgb(130, 38, 107);
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.pagetitle {
+  font-family: var(--font-primary);
+  color: var(--color-red);
+  font-size: 3em;
+  transition: all ease-in-out 0.3s;
+  width: fit-content;
+  font-weight: 700;
+}
+
+.pagedescription {
+  font-size: 1.75em;
+  text-transform: capitalize;
+  font-family: var(--font-text);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  color: var(--color-mid);
+  width: fit-content;
+  margin: 0.5em auto 0.25em auto;
+}
+
+.colophon {
+  font-size: 1.2em;
+  margin: 0 auto 3em auto;
+  color: var(--color-light);
+  letter-spacing: 0.02em;
+  max-width: 60ch;
+}
+
+.colophon a::after {
+  color: var(--color-pista);
+  content: "🔗";
+}
+
+.colophon a:hover {
+  color: var(--color-red);
+}
+
+li,
+ul {
+  text-align: left;
+  line-height: 1.2;
+  margin: 1em auto;
+  padding-left: 0.5em;
+}
+
+.hero {
+  display: grid;
+  min-height: 20vh;
+  place-content: center;
+  padding-top: 15vh;
+  padding-bottom: 5vh;
+  text-align: left;
+}
+
+body {
+  background: var(--color-dark);
+  padding: 1.25em;
+  color: var(--color-light);
+  font-size: 16px;
+  font-style: normal;
+  text-align: center;
+  font-family: var(--font-primary);
+  font-weight: 300;
+}
+
+a {
+  color: var(--color-pista);
+  text-decoration: none;
+  transition: all ease-in-out 0.2s;
+}
+
+a:hover {
+  color: var(--color-red);
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+p {
+  font-size: 1.25em;
+  line-height: 1.45em;
+}
+
+.content {
+  max-width: 100ch;
+  margin: 1em auto;
+}
+
+.project-item {
+  margin: 3em auto;
+  font-family: var(--font-text);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-item__header {
+  text-transform: capitalize;
+}
+
+.project-item__header a {
+  border: 4px dashed var(--color-mid);
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0.1em 0.25em;
+  font-family: var(--font-secondary);
+  font-weight: 900;
+  font-size: 1.75em;
+  line-height: 1.75;
+  transition: all ease-in-out 0.2s;
+}
+
+.project-item__about, .project-item__price {
+  font-size: 1.5em;
+}
+
+.project-item__header a:hover {
+  border: 4px dashed palevioletred;
+  transition: all ease-in-out 0.2s;
+  color: var(--color-light);
+  cursor: pointer;
+}
+
+.go-to-top {
+  height: 2em;
+  width: 2em;
+  margin-left: auto;
+  border-radius: 50%;
+  padding: 1em;
+  border: 5px dashed var(--color-light);
+  fill: var(--color-mid);
+  background-color: var(--color-dark);
+  transition: all ease-in-out 0.2s;
+}
+
+.go-to-top:hover {
+  border: 5px dashed var(--color-dark);
+  fill: var(--color-dark);
+  background-color: var(--color-mid);
+}
+
+.cta {
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-items: stretch;
+  max-width: 150ch;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.svg-container {
+  display: none;
+  visibility: hidden;
+}
+
+.toggle {
+  display: flex;
+  background: none;
+  font-size: 2.5em;
+  padding: 4px 9px;
+  transition: all ease-in-out 0.2s;
+  border-radius: 45%;
+  border: 3px dashed var(--color-pista);
+}
+
+.path {
+  font-family: var(--font-primary);
+  font-size: 1.5em;
+  font-weight: 900;
+  color: var(--color-pista);
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 150ch;
+  margin: 0 auto;
+  padding: 1rem 0;
+  flex-direction: row;
+  align-items: center;
+}
+
+.path a {
+  color: var(--color-mid);
+  transition: all ease-in-out 0.2s;
+}
+
+.path a:hover {
+  color: var(--color-red);
+}
+
+.toggle:hover {
+  border: 3px dashed var(--color-red);
+  cursor: grabbing;
+  transition: all ease-in-out 0.3s;
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+
+/* 
+	##Device = Laptops, Desktops
+	##Screen = B/w 1025px to 1280px
+  */
+
+@media (min-width: 1025px) {
+  .food-item__about {
+    font-size: 1.5em;
+  }
+  .food-item__header {
+    font-size: 2.5em;
+  }
+  /* CSS */
+  .pagedescription {
+    font-size: 2.5em;
+  }
+
+  .path {
+    font-size: 2em;
+  }
+
+  .food-item__cuisine {
+    font-size: 1.5em;
+  }
+
+  .pagetitle a {
+    font-size: 9em;
+  }
+}
+
+.footer-link {
+  color: var(--color-mid);
+  font-family: monospace;
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
+  transition: all ease-in-out 0.3s;
+}
+
+.footer-link:hover {
+  color: var(--color-red);
+  border-bottom: 2px solid var(--color-pista);
+}
+
+
+footer {
+  display: grid;
+  min-height: 20vh;
+  text-align: center;
+}
+
+/* 
+	##Device = Tablets, Ipads (portrait)
+	##Screen = B/w 768px to 1024px
+  */
+
+@media (min-width: 768px) {
+  .colophon {
+    font-size: 1.5em;
+  }
+  .pagetitle a {
+    font-size: 6em;
+  }
+  .circle, .cart {
+    margin-left: 13em;
+    width: 12em;
+    height: 12em;
+  }
+  .footer-links {
+    flex-direction: row;
+    column-gap: 1em;
+  }
+
+  /* CSS */
+}
