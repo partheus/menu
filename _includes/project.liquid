@@ -1,7 +1,6 @@
-<div class="project-item">
-    <h2 class="project-item__header">
-      <a target="_blank" href="{{ project.data.url }}">{{ project.data.title }}</a>
-      <span class="project-item__price">{{ project.data.price }}</span>
-    </h2>
-    <div class="project-item__about">{{ project.templateContent | safe }}</div>  
-  </div>
+<div class="food-item">
+  <h2 class="food-item__header">
+    <a target="_blank" href="{{ project.data.url }}">{{ project.data.title }}</a>
+  </h2>
+  <div class="food-item__about">{{ project.templateContent | safe }}</div>
+</div>

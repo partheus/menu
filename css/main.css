@@ -1,19 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;700&display=swap');
+
 :root {
-  --color-dark: rgb(14, 24, 12);
+  --color-dark: rgb(46, 2, 2);
   --color-mid: #e6b771;
   --color-light: rgb(251, 245, 233);
   --color-red: rgb(220, 20, 60);
   --color-pista: aquamarine;
   --max-width: 150ch;
   --font-primary: 'League Spartan', sans-serif;
-}
-
-.light--mode {
-  --color-dark: rgb(232, 250, 233);
-  --color-mid: #810000;
-  --color-light: rgb(12, 12, 11);
-  --color-red: rgb(0, 195, 254);
-  --color-pista: rgb(130, 38, 107);
 }
 
 html {
@@ -24,24 +18,24 @@ html {
 }
 
 .pagetitle {
-  font-family: var(--font-primary);
+  text-transform: lowercase;
   color: var(--color-red);
-  font-size: 3em;
+  font-size: 7em;
+  border-bottom: 10px dashed salmon;
   transition: all ease-in-out 0.3s;
   width: fit-content;
-  font-weight: 700;
+  margin: auto;
 }
 
 .pagedescription {
-  font-size: 1.75em;
+  font-size: 1.5em;
   text-transform: capitalize;
   font-family: var(--font-text);
-  font-weight: 300;
-  line-height: 1.1;
+  font-weight: bold;
   letter-spacing: 0.03em;
   color: var(--color-mid);
   width: fit-content;
-  margin: 0.5em auto 0.25em auto;
+  margin: 1em auto 0.25em auto;
 }
 
 .colophon {
@@ -71,22 +65,25 @@ ul {
 
 .hero {
   display: grid;
-  min-height: 20vh;
+  min-height: 50vh;
   place-content: center;
   padding-top: 15vh;
   padding-bottom: 5vh;
-  text-align: left;
+  text-align: center;
 }
 
 body {
   background: var(--color-dark);
-  padding: 1.25em;
+  padding: 1em;
   color: var(--color-light);
   font-size: 16px;
   font-style: normal;
   text-align: center;
   font-family: var(--font-primary);
-  font-weight: 300;
+
+  @media screen and (min-width: 600px) {
+    padding: 5em;
+  }
 }
 
 a {
@@ -108,7 +105,7 @@ p {
 }
 
 p {
-  font-size: 1.25em;
+  font-size: 1.75em;
   line-height: 1.45em;
 }
 
@@ -117,18 +114,18 @@ p {
   margin: 1em auto;
 }
 
-.project-item {
-  margin: 3em auto;
+.food-item {
+  margin: 6em auto;
   font-family: var(--font-text);
   display: flex;
   flex-direction: column;
 }
 
-.project-item__header {
+.food-item__header {
   text-transform: capitalize;
 }
 
-.project-item__header a {
+.food-item__header a {
   border: 4px dashed var(--color-mid);
   width: fit-content;
   margin: 0 auto;
@@ -140,20 +137,117 @@ p {
   transition: all ease-in-out 0.2s;
 }
 
-.project-item__about, .project-item__price {
-  font-size: 1.5em;
+.food-item__header a::after {
+  content: "🔗";
+  display: inline;
+  position: relative;
+  bottom: 10px;
+  left: 5px;
+  font-size: 0.5em;
 }
 
-.project-item__header a:hover {
+.food-item__about {
+  margin-top: 0.5em;
+  font-size: 1em;
+}
+
+.food-item__cuisine {
+  font-family: var(--font-primary);
+  color: var(--color-red);
+  background: var(--color-light);
+  /* border-radius: 50px; */
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 1em;
+  padding: 0.5em 1em;
+  font-weight: 700;
+}
+
+.shape {
+  display: block;
+  position: relative;
+  opacity: 0.7;
+  box-shadow: inset;
+  z-index: -4;
+  width: 10em;
+  height: 10em;
+  background: var(--color-red);
+  margin-left: 1em;
+  margin-bottom: -5em;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.cart {
+  border-radius: 20%;
+}
+
+.food-item__header a:hover {
   border: 4px dashed palevioletred;
   transition: all ease-in-out 0.2s;
   color: var(--color-light);
   cursor: pointer;
 }
 
+.food-emoji {
+  margin: 1em auto;
+  padding: 0.5em;
+  background-color: var(--color-pista);
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  filter: hue-rotate(-85deg);
+}
+
+.food-hover {
+  padding: 0.75em;
+  background-color: var(--color-pista);
+  height: 32px;
+  width: 32px;
+  border-radius: 10%;
+  position: relative;
+}
+
+.svg-wave {
+  fill: var(--color-mid);
+  max-width: 100ch;
+  margin: 0 auto;
+}
+
+.error-svg {
+  fill: var(--color-red);
+  animation: roll-in-blurred-left;
+  max-width: 90%;
+}
+
+.svg-line {
+  fill: var(--color-pista);
+  height: 5em;
+}
+
+.svg-o {
+  fill: var(--color-pista);
+  border: 5px dashed var(--color-red);
+  height: 3em;
+  width: 3em;
+  margin: 1em auto;
+  border-radius: 50%;
+  padding: 2em;
+  transition: all ease-in-out 0.2s;
+}
+
+.svg-o:hover {
+  fill: var(--color-red);
+  border: 5px dashed var(--color-pista);
+}
+
 .go-to-top {
   height: 2em;
   width: 2em;
+  margin-top: 2em;
+  margin-bottom: 2em;
   margin-left: auto;
   border-radius: 50%;
   padding: 1em;
@@ -173,26 +267,14 @@ p {
   height: fit-content;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-end;
   justify-items: stretch;
   max-width: 150ch;
-  margin-top: 2em;
-  margin-bottom: 2em;
 }
 
 .svg-container {
   display: none;
   visibility: hidden;
-}
-
-.toggle {
-  display: flex;
-  background: none;
-  font-size: 2.5em;
-  padding: 4px 9px;
-  transition: all ease-in-out 0.2s;
-  border-radius: 45%;
-  border: 3px dashed var(--color-pista);
 }
 
 .path {
@@ -226,23 +308,6 @@ p {
   color: var(--color-red);
 }
 
-.toggle:hover {
-  border: 3px dashed var(--color-red);
-  cursor: grabbing;
-  transition: all ease-in-out 0.3s;
-}
-
-/* 
-  ##Device = Desktops
-  ##Screen = 1281px to higher resolution desktops
-*/
-
-
-/* 
-	##Device = Laptops, Desktops
-	##Screen = B/w 1025px to 1280px
-  */
-
 @media (min-width: 1025px) {
   .food-item__about {
     font-size: 1.5em;
@@ -269,8 +334,11 @@ p {
 }
 
 .footer-link {
+  font-size: 1.5em;
+  letter-spacing: 0em;
   color: var(--color-mid);
   font-family: monospace;
+  cursor: pointer;
   font-weight: bold;
   border-bottom: 2px solid transparent;
   transition: all ease-in-out 0.3s;
@@ -281,6 +349,14 @@ p {
   border-bottom: 2px solid var(--color-pista);
 }
 
+.footer-links {
+  justify-content: center;
+  row-gap: 1em;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 3em auto;
+}
 
 footer {
   display: grid;

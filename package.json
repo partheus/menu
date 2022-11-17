@@ -1,7 +1,7 @@
 {
-  "name": "@partheus/food",
+  "name": "@partheus/menu",
   "version": "1.0.0",
-  "description": "A place for Parth's favorite eats",
+  "description": "A place for Parth's projects in a menu format",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,12 +9,9 @@
     "build": "eleventy"
   },
   "keywords": [],
-  "author": "",
+  "author": "Parth Shiralkar",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1"
-  },
-  "dependencies": {
-    "clean-css": "^5.3.1"
   }
 }
