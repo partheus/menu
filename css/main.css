@@ -79,63 +79,13 @@ p {
 }
 
 .project-item {
-  border: #C83000 2px solid;
+  padding: 1em;
 }
 
 .error-svg {
   fill: var(--color-red);
   animation: roll-in-blurred-left;
   max-width: 90%;
-}
-
-.svg-line {
-  fill: var(--color-pista);
-  height: 5em;
-}
-
-.svg-o {
-  fill: var(--color-pista);
-  border: 5px dashed var(--color-red);
-  height: 3em;
-  width: 3em;
-  margin: 1em auto;
-  border-radius: 50%;
-  padding: 2em;
-  transition: all ease-in-out 0.2s;
-}
-
-.svg-o:hover {
-  fill: var(--color-red);
-  border: 5px dashed var(--color-pista);
-}
-
-.go-to-top {
-  height: 2em;
-  width: 2em;
-  margin-top: 2em;
-  margin-bottom: 2em;
-  margin-left: auto;
-  border-radius: 50%;
-  padding: 1em;
-  border: 5px dashed var(--color-light);
-  fill: var(--color-mid);
-  background-color: var(--color-dark);
-  transition: all ease-in-out 0.2s;
-}
-
-.go-to-top:hover {
-  border: 5px dashed var(--color-dark);
-  fill: var(--color-dark);
-  background-color: var(--color-mid);
-}
-
-.cta {
-  height: fit-content;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  justify-items: stretch;
-  max-width: 150ch;
 }
 
 .path {
