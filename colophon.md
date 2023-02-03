@@ -10,7 +10,6 @@ description: col⋅o⋅phon | noun. An inscription, usually at the end of a book
 $ view this repo on github</a></h4>
 
 - This site is built with [EleventyJS](https://11ty.dev)
-- Primary typeface is [Big Shoulders Text](https://xotype.co/big-shoulders/) by Patrick King
-- Secondary typeface is [Bitter HT](https://www.huertatipografica.com/en/fonts/bitter-ht) by Huerta Tipográfica
+- Primary typeface is [League Spartan](https://fonts.google.com/specimen/League+Spartan) by Matt Bailey, Tyler Finck
 - Designed and developed by [Parth Shiralkar](https://parth.ninja)
 </div>
