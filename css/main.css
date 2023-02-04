@@ -3,7 +3,7 @@
 :root {
   --color-dark: #0b5e2e;
   --color-mid: #e6b771;
-  --color-light: #FAF3EC;
+  --color-light: #fff5c5;
   --color-red: #C83000;
   --color-pista: #681f1f;
   --max-width: 150ch;
@@ -32,6 +32,7 @@ ul {
   padding-top: 5vh;
   padding-bottom: 5vh;
   text-align: center;
+  line-height: 2.4em;
 }
 
 body {
@@ -55,7 +56,7 @@ a {
 }
 
 a:hover {
-  color: var(--color-red);
+  color: var(--color-dark);
 }
 
 h1,
@@ -82,15 +83,11 @@ p {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 150ch;
+  max-width: 90ch;
   margin: 0 auto;
   padding: 1rem 0;
   flex-direction: row;
   align-items: center;
-}
-
-div.hero>h2 {
-  font-size: 1.45em;
 }
 
 .path {
@@ -112,16 +109,13 @@ div.hero>h2 {
 }
 
 .pagetitle {
-  font-size: 3em;
-
-  @media screen and (min-width: 600px) {
-    font-size: 5em;
-}
+  font-size: 2.4em;
 }
 
-div.hero>h2 {
-  font-size: 2em;
+.pagedescription {
+  font-size: 1.7em;
   font-weight: 300;
+  line-height: 1.3em;
 }
 
 .project-item {
@@ -143,15 +137,12 @@ div.hero>h2 {
 }
 
 .project-item__header>a {
-  border: 2px solid transparent;
-  transition: all ease-in-out 0.3s;
-  padding: 4px 2px;
+  border-bottom: 2px solid transparent;
 }
 
 .project-item__header>a:hover {
+  border-bottom: 2px solid salmon;
   cursor: pointer;
-  border: 2px solid var(--color-pista);
-  transition: all ease-in-out 0.3s;
 }
 
 .project-item>.project-item__details>.project-item__about>p>u {
@@ -165,10 +156,8 @@ div.hero>h2 {
   transition: all ease-in-out 0.3s;
 }
 
-
 .project-item__about {
-  font-size: 0.81em;
-  margin-left: 2px;
+  font-size: 0.75em;
 }
 
 .project-item__price {
@@ -185,4 +174,26 @@ footer {
   display: grid;
   min-height: 5vh;
   text-align: center;
+}
+
+.colophon {
+  font-size: 1em;
+}
+
+@media screen and (min-width: 600px) {
+  .colophon {
+    font-size: 1.6em;
+  }
+
+  .project-item__about {
+    font-size: 0.85em;
+  }
+
+  .pagetitle {
+    font-size: 3.5em;
+  }
+
+  .pagedescription {
+    font-size: 3em;
+  }
 }
